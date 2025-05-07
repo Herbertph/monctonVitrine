@@ -12,8 +12,8 @@
       <!--(Desktop Only) -->
       <nav ref="desktopNav" class="hidden md:flex space-x-8 font-urbanist">
         <a href="#" class="nav-link text-[#2E7D32] transition-colors duration-300">Home</a>
-        <a href="#" class="nav-link text-[#2E7D32] transition-colors duration-300">Sobre</a>
-        <a href="#" class="nav-link text-[#2E7D32] transition-colors duration-300">Serviços</a>
+        <a href="#" class="nav-link text-[#2E7D32] transition-colors duration-300">Comercio</a>
+        <a href="#" class="nav-link text-[#2E7D32] transition-colors duration-300">Eventos</a>
         <a href="#" class="nav-link text-[#2E7D32] transition-colors duration-300">Contato</a>
       </nav>
   
