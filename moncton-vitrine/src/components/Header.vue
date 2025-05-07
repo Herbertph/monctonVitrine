@@ -4,7 +4,7 @@
       <div class="flex-1 flex justify-center md:justify-start items-center space-x-2">
         <span class="text-xl font-bold font-urbanist">
           <span class="text-yellow-400">B</span>
-          <span class="text-green-600">R</span>-
+          <span class="text-green-600">R</span> -
           <span class="text-red-600">Moncton</span>
         </span>
       </div>
