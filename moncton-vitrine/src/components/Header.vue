@@ -1,5 +1,5 @@
 <template>
-    <header class="flex items-center justify-between px-8 py-4 shadow-md relative">
+    <header class="flex items-center justify-between px-8 py-4 shadow-md relative sticky top-0 z-[999] bg-white">
       <!-- Logo -->
       <div class="flex-1 flex justify-center md:justify-start items-center space-x-2">
         <span class="text-xl font-bold font-urbanist">
