@@ -3,6 +3,7 @@ import Header from './components/Header.vue';
 import CardSection from './components/CardSection.vue';
 import EventsCarousel from './components/EventsCarousel.vue';
 import Footer from './components/Footer.vue';
+import Hero from './components/Hero.vue';
 export default {
   name: 'App',
   components: {
@@ -10,6 +11,7 @@ export default {
     CardSection,
     EventsCarousel,
     Footer,
+    Hero,
   },
 };
 </script>
@@ -17,6 +19,7 @@ export default {
 <template>
  <div>
     <Header />
+    <Hero />
     <CardSection />
     <EventsCarousel />  
     <Footer />
@@ -24,5 +27,4 @@ export default {
 </template>
 
 <style scoped>
-
 </style>
