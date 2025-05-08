@@ -1,7 +1,7 @@
 <template>
   <section class="px-8 py-12 bg-[#4CAF50]">
     <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold mb-8 font-urbanist text-center text-[#2E7D32]">City Events</h2>
+        <h2 class="text-3xl font-bold mb-8 font-roboto text-center text-[#FCD34D]">Proximos Eventos</h2>
   
         <Splide
           :options="splideOptions"
@@ -9,7 +9,7 @@
         >
           <SplideSlide v-for="(event, index) in events" :key="index">
             <div class="rounded-lg overflow-hidden shadow-md bg-white">
-              <img :src="event.image" :alt="event.title" class="h-64 w-full object-cover" />
+              <img :src="event.image" :alt="event.title" class="h-96 w-full object-cover" />
               <div class="p-4">
                 <h3 class="text-lg font-semibold text-gray-800">{{ event.title }}</h3>
                 <p class="text-sm text-gray-600">{{ event.description }}</p>
@@ -23,6 +23,7 @@
   
   <script>
   import { Splide, SplideSlide } from '@splidejs/vue-splide';
+  import baile from '../assets/baile.png';
   
   export default {
     name: 'EventsCarousel',
@@ -61,19 +62,19 @@
 
         events: [
           {
-            image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
-            title: 'Food Market Weekend',
-            description: 'Taste local flavors at our monthly food market.',
+            image: baile,
+            title: 'Baile Funk',
+            description: 'Experimente ou mate a saudade do baile funk.',
           },
           {
-            image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
-            title: 'Lantern Festival',
-            description: 'Celebrate culture with stunning lights and activities.',
+            image: baile,
+            title: 'Baile Funk',
+            description: 'Experimente ou mate a saudade do baile funk.',
           },
           {
-            image: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80',
-            title: 'Outdoor Concert',
-            description: 'Live music and entertainment under the stars.',
+            image: baile,
+            title: 'Baile Funk',
+            description: 'Experimente ou mate a saudade do baile funk.',
           },
         ],
       };
