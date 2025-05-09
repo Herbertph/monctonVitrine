@@ -1,5 +1,5 @@
 <template>
-  <section class="px-8 py-12 bg-[#4CAF50]">
+  <section id="eventos" class="px-8 py-12 bg-[#4CAF50]">
     <div class="max-w-7xl mx-auto">
         <h2 class="text-3xl font-bold mb-8 font-roboto text-center text-[#FCD34D]">Proximos Eventos</h2>
   
