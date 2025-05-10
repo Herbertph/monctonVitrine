@@ -26,7 +26,7 @@ A modern Vue.js application showcasing Moncton's highlights and attractions. Bui
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone Herbertph/monctonVitrine
 cd moncton-vitrine
 ```
 
