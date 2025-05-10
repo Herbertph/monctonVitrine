@@ -11,10 +11,28 @@
 
     <!-- Navigation Links (Desktop Only) -->
     <nav ref="desktopNav" class="hidden md:flex space-x-8 font-urbanist">
-      <a href="#home" class="nav-link text-[#2E7D32] transition-colors duration-300">Home</a>
-      <a href="#comercio" class="nav-link text-[#2E7D32] transition-colors duration-300">Comercio</a>
-      <a href="#eventos" class="nav-link text-[#2E7D32] transition-colors duration-300">Eventos</a>
-      <a href="#contato" class="nav-link text-[#2E7D32] transition-colors duration-300">Contato</a>
+      <a href="#home" class="nav-link text-[#2E7D32] transition-colors duration-300">{{ $t('nav.home') }}</a>
+      <a href="#comercio" class="nav-link text-[#2E7D32] transition-colors duration-300">{{ $t('nav.comercio') }}</a>
+      <a href="#eventos" class="nav-link text-[#2E7D32] transition-colors duration-300">{{ $t('nav.eventos') }}</a>
+      <a href="#contato" class="nav-link text-[#2E7D32] transition-colors duration-300">{{ $t('nav.contato') }}</a>
+      <div class="flex items-center space-x-2 pl-4 border-l border-gray-300 ml-4">
+  <img
+    src="https://flagcdn.com/w40/br.png"
+    alt="Português"
+    aria-label="Trocar para português"
+    class="w-6 h-6 rounded-full object-cover cursor-pointer hover:scale-110 transition-transform"
+    @click="$i18n.locale = 'pt'"
+  />
+  <img
+    src="https://flagcdn.com/w40/ca.png"
+    alt="English"
+    aria-label="Switch to English"
+    class="w-6 h-6 rounded-full object-cover cursor-pointer hover:scale-110 transition-transform"
+    @click="$i18n.locale = 'en'"
+  />
+</div>
+
+
     </nav>
 
     <!-- Mobile Menu Button -->
@@ -32,10 +50,10 @@
     <!-- Dropdown Mobile Menu -->
     <transition name="fade">
       <div v-if="menuOpen" ref="mobileNav" class="absolute top-full right-8 bg-white shadow-lg rounded-md mt-2 py-2 w-40 flex flex-col space-y-2 font-urbanist">
-        <a href="#home" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">Home</a>
-        <a href="#comercio" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">Comercio</a>
-        <a href="#eventos" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">Eventos</a>
-        <a href="#contato" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">Contato</a>
+        <a href="#home" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">{{ $t('nav.home') }}</a>
+        <a href="#comercio" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">{{ $t('nav.comercio') }}</a>
+        <a href="#eventos" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">{{ $t('nav.eventos') }}</a>
+        <a href="#contato" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">{{ $t('nav.contato') }}</a>
       </div>
     </transition>
   </header>

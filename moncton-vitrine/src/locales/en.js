@@ -1,0 +1,32 @@
+export default {
+    nav: {
+      home: 'Home',
+      comercio: 'Business',
+      eventos: 'Events',
+      contato: 'Contact'
+    },
+    hero: {
+      title: 'BRAZIL',
+      title2: 'in',
+      title3: 'MONCTON',
+      subtitle: 'Discover the culture and flavors of Brazil.',
+      button: 'More info'
+    },
+    card: {
+      title: 'Business',
+      description: 'Business description',
+      location: 'Business location'
+    },
+    event: {
+      title: 'Upcoming Events',
+      description: 'Event description',
+      location: 'Event location'
+    },
+    cardsection: {
+      title: 'Our Businesses'
+    },
+    footer: {
+      rights: 'All rights reserved.'
+    }
+  }
+  

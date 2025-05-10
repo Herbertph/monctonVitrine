@@ -3,10 +3,10 @@
     
     <div class="z-10 text-center">
       <h1 class="text-5xl font-extrabold text-[#2E7D32] leading-tight">
-        <span class="bg-yellow-400 px-2 rounded-md"> BRASIL</span><span class="text-red-600 px-2">em</span><span class="bg-yellow-400 px-2 rounded-md">MONCTON</span>
+        <span class="bg-yellow-400 px-2 rounded-md">{{ $t('hero.title') }}</span><span class="text-red-600 px-2">{{ $t('hero.title2') }}</span><span class="bg-yellow-400 px-2 rounded-md">{{ $t('hero.title3') }}</span>
       </h1>
       <h2 class="mt-4 font-bold text-lg text-[#FCD34D] max-w-md mx-auto">
-        Descubra a cultura e os sabores do Brasil.
+        {{ $t('hero.subtitle') }}
       </h2>
   
     </div>

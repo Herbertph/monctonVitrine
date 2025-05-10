@@ -9,7 +9,7 @@
   
       <!-- Conteúdo do Footer -->
       <div class="flex justify-center items-center h-24 px-4 font-urbanist text-gray-600 text-sm">
-        © {{ new Date().getFullYear() }} Todos os direitos reservados.
+        © {{ new Date().getFullYear() }} {{ $t('footer.rights') }}
       </div>
     </footer>
   </template>
