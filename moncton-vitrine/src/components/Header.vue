@@ -33,6 +33,22 @@
       </div>
     </nav>
 
+    <!-- Mobile: bandeiras à esquerda do botão -->
+<div class="md:hidden flex items-center space-x-2 mr-4">
+  <img
+    src="https://flagcdn.com/w40/br.png"
+    alt="Português"
+    class="w-6 h-6 rounded-full object-cover cursor-pointer hover:scale-110 transition-transform"
+    @click="$i18n.locale = 'pt'"
+  />
+  <img
+    src="https://flagcdn.com/w40/ca.png"
+    alt="English"
+    class="w-6 h-6 rounded-full object-cover cursor-pointer hover:scale-110 transition-transform"
+    @click="$i18n.locale = 'en'"
+  />
+</div>
+
     <!-- Mobile Menu Button -->
     <div class="md:hidden flex items-center">
       <button ref="menuButton" @click="toggleMenu" class="focus:outline-none">
