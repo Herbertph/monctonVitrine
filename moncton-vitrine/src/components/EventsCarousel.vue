@@ -24,7 +24,8 @@
   <script>
   import { Splide, SplideSlide } from '@splidejs/vue-splide';
   import baile from '../assets/baile.png';
-  
+  import balada from '../assets/balada.png';
+  import deixa from '../assets/deixa.png';
   export default {
     name: 'EventsCarousel',
     components: {
@@ -67,14 +68,14 @@
             description: 'Experimente ou mate a saudade do baile funk.',
           },
           {
-            image: baile,
-            title: 'Baile Funk',
-            description: 'Experimente ou mate a saudade do baile funk.',
+            image: balada,
+            title: 'Balada',
+            description: 'Experimente ou mate a saudade da balada.',
           },
           {
-            image: baile,
-            title: 'Baile Funk',
-            description: 'Experimente ou mate a saudade do baile funk.',
+            image: deixa,
+            title: 'Deixa Acontecer',
+            description: 'Deixa acontecer naturalmente.',
           },
         ],
       };

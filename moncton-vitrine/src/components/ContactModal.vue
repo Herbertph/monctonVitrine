@@ -11,13 +11,13 @@
   
         <!-- Formulário com redirecionamento automático -->
         <form
-          action="https://formsubmit.co/b6c023cad614035a096fd90a8538d5a3"
-          method="POST"
+          action="https://api.web3forms.com/submit" method="POST"
           class="flex flex-col gap-4"
         >
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_subject" value="Novo contato via BR-Moncton!" />
-          <input type="hidden" name="_next" value="https://brmoncton.com/obrigado.html" />
+        <input type="hidden" name="access_key" value="ad1433f0-d480-4ba6-ac0f-684999b55ef0">
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        <input type="hidden" name="redirect" value="http://localhost:5173/" />
+
   
           <input
             type="text"
