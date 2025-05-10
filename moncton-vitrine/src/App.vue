@@ -5,7 +5,7 @@ import CardSection from './components/CardSection.vue';
 import EventsCarousel from './components/EventsCarousel.vue';
 import Footer from './components/Footer.vue';
 import Hero from './components/Hero.vue';
-
+import ContactModal from './components/ContactModal.vue';
 export default {
   name: 'App',
   components: {
@@ -14,36 +14,56 @@ export default {
     EventsCarousel,
     Footer,
     Hero,
+    ContactModal,
   },
-  data() {
-    return {
-      showScrollTop: false,
-    };
-  },
-  methods: {
-    scrollToTop() {
+  setup() {
+    const showScrollTop = ref(false);
+    const showModal = ref(false);
+
+    const scrollToTop = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    },
-    handleScroll() {
-      this.showScrollTop = window.scrollY > window.innerHeight * 0.8;
-    },
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  unmounted() {
-    window.removeEventListener('scroll', this.handleScroll);
+    };
+
+    const handleScroll = () => {
+      showScrollTop.value = window.scrollY > window.innerHeight * 0.8;
+    };
+
+    const openContactModal = () => {
+      showModal.value = true;
+    };
+
+    const closeModal = () => {
+      showModal.value = false;
+    };
+
+    onMounted(() => {
+      window.addEventListener('scroll', handleScroll);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener('scroll', handleScroll);
+    });
+
+    return {
+      showScrollTop,
+      showModal,
+      openContactModal,
+      closeModal,
+      scrollToTop,
+    };
   },
 };
 </script>
 
+
 <template>
   <div>
-    <Header />
+    <Header @open-contact-modal="openContactModal" />
     <Hero />
     <CardSection />
     <EventsCarousel />  
     <Footer />
+    <ContactModal :visible="showModal" @close="closeModal" />
 
     <!-- Botão flutuante -->
     <button

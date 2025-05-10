@@ -27,6 +27,14 @@ export default {
     },
     footer: {
       rights: 'Todos os direitos reservados.'
+    },
+    contact: {
+      title: 'Entre em contato',
+      name: 'Nome',
+      email: 'Email',
+      message: 'Mensagem',
+      send: 'Enviar',
+      thankyou: 'Obrigado pelo contato! 😊'
     }
   }
   

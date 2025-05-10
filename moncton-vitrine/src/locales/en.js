@@ -27,6 +27,14 @@ export default {
     },
     footer: {
       rights: 'All rights reserved.'
+    },
+    contact: {
+      title: 'Contact us',
+      name: 'Name',
+      email: 'Email',
+      message: 'Message',
+      send: 'Send',
+      thankyou: 'Thank you for contacting us! 😊'
     }
   }
   

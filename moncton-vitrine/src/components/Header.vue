@@ -14,25 +14,23 @@
       <a href="#home" class="nav-link text-[#2E7D32] transition-colors duration-300">{{ $t('nav.home') }}</a>
       <a href="#comercio" class="nav-link text-[#2E7D32] transition-colors duration-300">{{ $t('nav.comercio') }}</a>
       <a href="#eventos" class="nav-link text-[#2E7D32] transition-colors duration-300">{{ $t('nav.eventos') }}</a>
-      <a href="#contato" class="nav-link text-[#2E7D32] transition-colors duration-300">{{ $t('nav.contato') }}</a>
+      <button @click="$emit('open-contact-modal')" class="nav-link text-[#2E7D32] transition-colors duration-300">{{ $t('nav.contato') }}</button>
       <div class="flex items-center space-x-2 pl-4 border-l border-gray-300 ml-4">
-  <img
-    src="https://flagcdn.com/w40/br.png"
-    alt="Português"
-    aria-label="Trocar para português"
-    class="w-6 h-6 rounded-full object-cover cursor-pointer hover:scale-110 transition-transform"
-    @click="$i18n.locale = 'pt'"
-  />
-  <img
-    src="https://flagcdn.com/w40/ca.png"
-    alt="English"
-    aria-label="Switch to English"
-    class="w-6 h-6 rounded-full object-cover cursor-pointer hover:scale-110 transition-transform"
-    @click="$i18n.locale = 'en'"
-  />
-</div>
-
-
+        <img
+          src="https://flagcdn.com/w40/br.png"
+          alt="Português"
+          aria-label="Trocar para português"
+          class="w-6 h-6 rounded-full object-cover cursor-pointer hover:scale-110 transition-transform"
+          @click="$i18n.locale = 'pt'"
+        />
+        <img
+          src="https://flagcdn.com/w40/ca.png"
+          alt="English"
+          aria-label="Switch to English"
+          class="w-6 h-6 rounded-full object-cover cursor-pointer hover:scale-110 transition-transform"
+          @click="$i18n.locale = 'en'"
+        />
+      </div>
     </nav>
 
     <!-- Mobile Menu Button -->
@@ -53,7 +51,7 @@
         <a href="#home" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">{{ $t('nav.home') }}</a>
         <a href="#comercio" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">{{ $t('nav.comercio') }}</a>
         <a href="#eventos" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">{{ $t('nav.eventos') }}</a>
-        <a href="#contato" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">{{ $t('nav.contato') }}</a>
+        <a @click="$emit('open-contact-modal')" class="mobile-link block px-4 py-2 text-[#2E7D32] transition-colors duration-300">{{ $t('nav.contato') }}</a>
       </div>
     </transition>
   </header>
@@ -64,6 +62,7 @@ import { ref, onMounted, onUnmounted, watch } from 'vue';
 
 export default {
   name: "Header",
+  emits: ['open-contact-modal'],
   setup() {
     const menuOpen = ref(false);
     const desktopNav = ref(null);
@@ -81,20 +80,20 @@ export default {
     };
 
     const handleClickOutside = (event) => {
-  const nav = mobileNav.value;
-  const button = menuButton.value;
+      const nav = mobileNav.value;
+      const button = menuButton.value;
 
-  const clickedOutsideMenu =
-    nav && !nav.contains(event.target) &&
-    button && !button.contains(event.target);
+      const clickedOutsideMenu =
+        nav && !nav.contains(event.target) &&
+        button && !button.contains(event.target);
 
-  if (clickedOutsideMenu) {
-    // Espera um "tick" para evitar conflito com a abertura do menu
-    setTimeout(() => {
-      menuOpen.value = false;
-    }, 50);
-  }
-};
+      if (clickedOutsideMenu) {
+        setTimeout(() => {
+          menuOpen.value = false;
+        }, 50);
+      }
+    };
+
     const setupHoverEffect = (containerSelector, linkClass) => {
       const container = containerSelector.value;
       if (!container) return;
@@ -152,7 +151,6 @@ export default {
 </script>
 
 <style scoped>
-/* Fade transition para o dropdown mobile */
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.3s ease;
 }
