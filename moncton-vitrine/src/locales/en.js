@@ -23,7 +23,7 @@ export default {
       location: 'Event location'
     },
     cardsection: {
-      title: 'Our Businesses'
+      title: 'Our Business'
     },
     footer: {
       rights: 'All rights reserved.'
